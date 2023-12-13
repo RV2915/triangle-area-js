@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traingle area </title>
+</head>
+<style>
+    /* div {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    input{
+        width: 23%;
+
+    }
+
+    button{
+        margin-left: 14px;
+    } */
+
+
+    body {
+        background-image: url("bg.jpg");
+    }
+
+    div {
+        margin-top: 4rem;
+        margin-left: 4rem;
+
+        height: 240px;
+        width: 340px;
+        text-align: center;
+        text-decoration: none;
+        padding-top: 15px;
+        /* border: 3px solid black; */
+        border-bottom: 3px solid black;
+        border-top: 3px solid black;
+
+        /* width: 330px; */
+        background-color: transparent;
+        /* height: 400px; */
+
+    }
+
+    input {
+        text-decoration: none;
+        width: 60%;
+        text-align: center;
+        margin-left: 1.6rem;
+        /* padding: 5rem; */
+        margin-bottom: 1.5rem;
+        outline: none;
+        border: none;
+        /* border-bottom: 2px solid black; */
+
+    }
+
+    button {
+        outline: none;
+        border: none;
+        margin-left: 1.3rem;
+        border-radius: 5px;
+        transition: 3.s ease-in-out;
+    }
+
+</style>
+
+<body>
+<div>
+    <h3> Calculate the area of triangle </h3>
+    <label>
+        value 1:<input type="text" id="a"><br>
+        value 2:<input type="text" id="b"><br>
+        value 3:<input type="text" id="c"><br>
+    </label>
+    <button onclick="cal()">Calculate</button>
+    <p id="ans"></p>
+</div>
+    <script>
+        cal = () => {
+            const a = parseInt(document.getElementById("a").value);
+            const b = parseInt(document.getElementById("b").value);
+            const c = parseInt(document.getElementById("c").value);
+
+            const sp = (a + b + c) / 2;
+            const area = Math.sqrt(sp * ((sp - a) * (sp - b) * (sp - c)));
+
+            document.getElementById("ans").innerHTML = "Answer: " + area;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
